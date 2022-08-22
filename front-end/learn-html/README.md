@@ -1,4 +1,4 @@
-## Learn HTML documentary
+## Learn HTML Documentary
 
 - Basic HTML
 - Semantic HTML
