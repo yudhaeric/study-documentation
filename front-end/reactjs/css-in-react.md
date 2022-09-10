@@ -15,7 +15,7 @@ Ada 3 cara menulis CSS pada react:
 
 ### Inline Object Styling
 
-![Object-Styling](img/object-styling.png)
+![Object-Styling](img/objectStyling.png)
 
 ## CSS Stylesheet
 
