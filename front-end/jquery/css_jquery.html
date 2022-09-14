@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar jQuery</title>
+    <style>
+        /* Membuat class change dan memberikan style */
+        .change {
+            background-color: black;
+            color: rgb(107, 199, 107);
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar jQuery</h1>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Event dan This
+            // Event di jQueri ada banyak, selengkapnya: https://api.jquery.com/category/events/
+
+            // Event Ketika Elemen h1 di Klik Warna Tulisan
+            $('h1').click(function() {
+                // menambahkan property css lebih dari 1
+                // $('h1').css({
+                //     'color': 'green',
+                //     'fontSize': '100px',
+                //     'backgroundColor': 'yellow'
+                // });
+                
+                // Menambahkan class change yang sudah di buat pada css ke elemen h1
+                // $('h1').addClass('change');
+
+                // Menghapus class change pada elemen h1
+                // $('h1').removeClass('change');
+
+                // Gabungan dari add dan remove class
+                // ketika class change sudah ada pada elemen h1 ketika di klik dia akan menghapus nya otomatis
+                // ketika class change belum ada pada elemen h1 ketika di klik dia akan menambahkan nya otomatis
+                $('h1').toggleClass('change');
+
+            });
+        });
+    </script>
+</body>
+</html>

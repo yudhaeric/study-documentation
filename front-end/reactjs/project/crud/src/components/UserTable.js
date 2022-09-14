@@ -1,24 +1,45 @@
+import ButtonModal from "./ButtonModal";
 import React, { Component } from "react";
-import Table from 'react-bootstrap/Table';
+import Table from "react-bootstrap/Table";
+
+const makanan = [
+  {
+    nama: "burger",
+    harga: 15000,
+  },
+  {
+    nama: "kentang",
+    harga: 8000,
+  },
+  {
+    nama: "ayam paha",
+    harga: 20000,
+  },
+];
 
 export default class UserTable extends Component {
   render() {
     return (
       <div>
-        <Table striped bordered hover size="sm">
+        <ButtonModal />
+        <Table striped bordered hover>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Phone</th>
+              <th>ID</th>
+              <th>Nama Makanan</th>
+              <th>Harga</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>0895330028942</td>
-            </tr>
+            {makanan.map((makanan, index) => (
+              <tr>
+                <td>{index + 1}</td>
+                <td>{makanan.nama}</td>
+                <td>{makanan.harga}</td>
+                <td>Edit Hapus</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </div>

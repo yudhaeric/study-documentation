@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar jQuery</title>
+</head>
+<body>
+    <h1>Belajar jQuery</h1>
+
+    <div id="box">Berikut Terdapat 4 Box</div>
+    <div class="boxes">Baris Pertama</div>
+    <div class="boxes">Baris Kedua</div>
+    <div class="boxes">Baris Ketiga</div>
+    <div class="boxes">Baris Keempat</div>
+    <br>
+    <form action="post">
+        <input type="text" id="inputText">
+        <input type="submit">
+    </form>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Selector Pada jQuery
+            $('h1').css('color', 'red');              // Tag HTML
+            $('#box').css('color', 'salmon');         // ID
+
+            $('.boxes').css('color', 'lightblue');    // Class
+            $('.boxes:first').css('color', 'green');  // Text Pertama Class boxes
+            $('.boxes:last').css('color', 'blue');    // Text Terakhir Class boxes
+            $('.boxes:eq(1)').css('color', 'yellow'); // Memilih Elemen Spesifik Sesuai Index
+        });
+    </script>
+</body>
+</html>

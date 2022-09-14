@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar jQuery</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar jQuery</h1>
+
+    <div id="box">Kotak 1</div>
+
+    <br>
+
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide</button>
+    <button id="btn3">Toggle</button>
+    <button id="btn4">Stop</button>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // chaining yaitu menggabungkan semua animasi, dan tidak terbatas
+            $('#btn1').click(function(){
+                $('#box').slideDown(2000).fadeOut(2000).fadeIn(2000);
+            })
+
+            // callback
+            $('#btn2').click(function(){
+                $('#box').slideUp(2000, function(){
+                    alert('selesai');
+                });
+            })
+
+            $('#btn3').click(function(){
+                $('#box').slideToggle(1500);
+            })
+
+            // stop
+            $('#btn4').click(function(){
+                $('#box').stop(1500);
+            })
+        });
+    </script>
+</body>
+</html>

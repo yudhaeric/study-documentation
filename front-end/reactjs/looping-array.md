@@ -2,13 +2,13 @@
 
 Data Array
 
-![](img/map.png)
+![dataArray](img/map.png)
 
 - Map: Berfungsi untuk melooping nilai array.
 
 - Filter: Berfungsi untuk memfilter nilai yang ingin di looping. Misal looping barang dengan harga < 10000
 
-![map](img/mapFilter.png)
+![mapFilter](img/mapFilter.png)
 
 - Reduce: Berfungsi untuk melihat total data. Misal total harga barang.
 
