@@ -34,14 +34,19 @@ Kita dapat menggunakan alert box untuk menampilkan data:
 
 ![Alert](img/output3.png)
 
+### Using Confirm()
+
+Kita dapat membuat input berupa alert sebagai konfirmasi untuk sebelum masuk ke web
+
+![Confirm](img/output4.png)
 ### Using console.log()
 
 Untuk tujuan debugging, dapat memanggil metode console.log() di browser untuk menampilkan data.
 
-![Console Log](img/output4.png)
+![Console Log](img/output5.png)
 
 ### Using window.print()
 
 Metode di browser untuk print konten window saat ini.
 
-![Print](img/output5.png)
+![Print](img/output6.png)
