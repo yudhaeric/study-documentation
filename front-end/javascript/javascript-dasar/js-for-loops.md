@@ -1,4 +1,4 @@
-## Looping Nilai Array
+# Looping Nilai Array
 
 Untuk melooping nilai dari array ada 3 cara:
 - for
@@ -7,13 +7,13 @@ Untuk melooping nilai dari array ada 3 cara:
 
 **NOTED:** Tidak ada yang lebih bagus dari ketiga nya, hanya prefer pake yang mana.
 
-## For
+# For
 
 For berguna, jika Anda ingin menjalankan kode yang sama berulang-ulang atau looping, setiap kali dengan nilai yang berbeda.
 
 ![For Loops](img/for1.png)
 
-## Array.forEach()
+# Array.forEach()
 
 Metode forEach() Bisa memanggil value array nya maupun urutan index. Tinggal masukin di parameter myFunction nya.
 
@@ -25,13 +25,19 @@ Simple: forEach()
 
 **NOTED:** forEach hanya bisa digunakan untuk memanggil nilai array.
 
-## For Of
+# For Of
 
 JavaScript for of loop, memungkinkan kita mengulang struktur data yang dapat diubah seperti Array, Strings, Maps, Arguments / NodeLists.
 
 ![For Of](img/for3.png)
 
-## For In
+Untuk looping index array pada for of menggunakan **entries()**
+
+![For Of](img/for7.png)
+
+**NOTES:** Data object tidak bisa pakai for of
+
+# For In
 
 For in untuk melooping property dari object:
 
