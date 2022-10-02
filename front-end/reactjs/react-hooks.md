@@ -1,5 +1,7 @@
 # React JS Hooks - useState useEffect
 
+useState merupakan cara mengoper data/variabel pada function component jadi tidak bisa digunakan pada class component, pada kelas component menggunakan state. Penulisan useState lebih simpel di banding dengan state dan saat ini sering digunakan.
+
 ## useState
 
 useState berguna juga untuk penampungan data sementara, yang bisa kita set ulang dengan function yang kita punya. Ada 2 parameter dalam useState atau disebut getter dan setter.
