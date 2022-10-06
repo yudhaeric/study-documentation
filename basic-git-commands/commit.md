@@ -40,4 +40,4 @@
 #### NOTED!
 
 - Setelah reset tetapi belum membuat commit baru, kita masih bisa mengembalikan commit yang sudah di reset
-- Ketika commit sudah di push ke repo Github, commit tidak bisa di reset, commit hanya bisa di reset pada Git di local
+- Ketika commit sudah di push ke repo Github, commit tidak bisa di reset, commit hanya bisa di reset pada Git di local computer
