@@ -1,4 +1,5 @@
 // querySelector -> Element
+
 const p4 = document.querySelector('#b p');
 p4.style.backgroundColor = 'lightblue';
 
@@ -14,6 +15,8 @@ li2.style.color = 'white';
 
 
 // querySelectorAll
+
+
 const p = document.querySelectorAll('p');
 // const p = document.querySelectorAll('p') [0]; bisa taruh index di samping
 // p[0].style.backgroundColor = 'lightblue';
