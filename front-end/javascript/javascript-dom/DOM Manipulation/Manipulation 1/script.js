@@ -7,9 +7,11 @@ const judul = document.getElementById('judul');
 judul.setAttribute('name', 'Yudha');
 
 // untuk melihat atribut pada tag html
+
 judul.getAttribute('name');
 
 // untuk mengahapus atribut pada html
+
 const a = document.querySelector('section#a a');
 a.removeAttribute('href');
 
