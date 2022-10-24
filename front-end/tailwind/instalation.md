@@ -26,6 +26,7 @@ Konfigurasi file Javascript yang ingin diberikan class - class Tailwind dengan n
 - src = difolder apa nanti kita simpan
 - ** = akan cek atau melihat seluruh folder yang ada didalam nya 
 - *.{js,ts,jsx,tsx} = akan cek semua file apapun di dalam nya, selama dia ektensi file nya js, ts, jsx, tsx
+- theme akan merubah sebuah default value, apabila hanya custom satu value sisanya akan hilang, extend hanya mereplace satu value yang di custom
 
 ## Tailwind Directives
 
