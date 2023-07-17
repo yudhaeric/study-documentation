@@ -10,7 +10,14 @@ url: 'mysql://dbuser:dbpass@localhost:3306/dbname'
 
 **Contoh:**
 
-![](./img/database.png)
+```
+db: {
+  provider: 'mysql',
+  url: 'mysql://root:yudha@localhost:3306/article_keystonejs',
+  enableLogging: true,
+  idField: { kind: 'cuid' },
+},
+```
 
 **Opsional Configuration:**
 
