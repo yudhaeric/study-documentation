@@ -18,7 +18,7 @@ export default config({
 
 ### Lists
 
-Opsi konfigurasi 'lists' adalah tempat di mana kita mendefinisikan model data atau skema dari sistem Keystone. Pada KeystoneJS 6 berada pada file **Schema.ts**.
+Opsi konfigurasi 'lists' adalah tempat di mana kita mendefinisikan model data atau skema dari sistem Keystone. Pada KeystoneJS 6 default nya berada pada file **Schema.ts**.
 
 ### Database
 
@@ -27,4 +27,8 @@ Opsi konfigurasi 'lists' adalah tempat di mana kita mendefinisikan model data at
 ### Server
 
 [Server Configuration](./Server.md)
+
+### Storage
+
+[Storage Configuration](./Storage.md)
 
