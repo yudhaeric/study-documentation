@@ -32,3 +32,7 @@ Opsi konfigurasi 'lists' adalah tempat di mana kita mendefinisikan model data at
 
 [Storage Configuration](./Storage.md)
 
+**Full Documentation:**
+
+https://keystonejs.com/docs/config/config
+
