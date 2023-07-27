@@ -46,3 +46,7 @@ ID dengan UUID:
   "name": "John Doe"
 }
 ```
+
+**Full Documentation:**
+
+https://keystonejs.com/docs/config/config#db
