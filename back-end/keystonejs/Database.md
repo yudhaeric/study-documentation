@@ -16,6 +16,9 @@ db: {
   url: 'mysql://root:yudha@localhost:3306/article_keystonejs',
   enableLogging: true,
   idField: { kind: 'cuid' },
+  onConnect: async context => {
+    ...
+  }
 },
 ```
 
@@ -46,6 +49,10 @@ ID dengan UUID:
   "name": "John Doe"
 }
 ```
+
+`onConnect: async context => {...}`
+
+Berfungsi untuk melakukan tindakan apa pun yang mungkin diperlukan saat menjalankan server, seperti [seeding data](./Seeding.md).
 
 **Full Documentation:**
 
