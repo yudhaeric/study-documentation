@@ -1,4 +1,4 @@
-#### Login
+## Login
 Membuat routes untuk login, dengan AuthenticationController function login.
 
 ```
@@ -30,7 +30,27 @@ public function login(Request $request) {
 }
 ```
 
-Akses endpoint untuk login, serta masukin email & password pada body, ketika login success saat di send akan muncul sebuah token pada body.
+Akses endpoint untuk login, serta masukin email & password pada body. Ketika login success saat di send akan muncul sebuah token pada body.
 
 ![login](images/postman-login.png)
+
+## See User Login
+
+Membuat routes untuk melihat data user yang sedang login
+
+```
+Route::get('/me', [AuthenticationController::class, 'me'])->middleware(['auth:sanctum']);
+```
+
+Membuat function **me** pada controller
+
+```
+public function me() {
+    return response()->json(Auth::user());
+}
+```
+Akses endpoint untuk melihat user yang sedang login, salin token setelah login, lalu masukan sebagai value `Bearer ...`
+
+![user](images/postman-see-user.png)
+
 
