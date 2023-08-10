@@ -53,4 +53,22 @@ Akses endpoint untuk melihat user yang sedang login, salin token setelah login, 
 
 ![user](images/postman-see-user.png)
 
+## Logout
 
+Membuat routes logout, untuk user yang sudah login bisa keluar dari akun nya
+
+```
+Route::get('/logout', [AuthenticationController::class, 'logout'])->middleware(['auth:sanctum']);
+```
+
+Membuat function logout pada controller, lalu saat user berhasil logout, kita perlu menghapus token yang di dapat saat user login ke akun nya  
+
+```
+public function logout(Request $request) {
+    $request->user()->currentAccessToken()->delete();
+}
+```
+
+Akses endpoint untuk logout
+
+![logout](images/postman-logout.png)
