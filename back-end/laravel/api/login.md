@@ -49,9 +49,11 @@ public function me() {
     return response()->json(Auth::user());
 }
 ```
-Akses endpoint untuk melihat user yang sedang login, salin token setelah login, lalu masukan sebagai value `Bearer ...`
+Akses endpoint untuk melihat user yang sedang login, salin token setelah login, lalu pada header masukan key `Authorization` dengan value `Bearer ...`
 
 ![user](images/postman-see-user.png)
+
+Header key `Accept` dengan value `application/json` berfungsi untuk memberi tahu server bahwa kita hanya ingin menerima data dalam bentuk JSON, dan bukan dalam format lain seperti XML atau HTML. Server kemudian dapat mengirimkan respons dalam format JSON agar sesuai dengan preferensi.
 
 ## Logout
 
