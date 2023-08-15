@@ -49,7 +49,7 @@ public function toArray(Request $request): array
 }
 ```
 
-Setelah membuat resource kita perlu membuat function detail pada controller
+Setelah membuat resource kita perlu membuat function detail pada controller, karena hanya satu data yang kita ambil makan menggunakan `new` bukan `::collection` seperti pada [get all data](get-all-data.md)
 
 ```
 public function detail($id) {
