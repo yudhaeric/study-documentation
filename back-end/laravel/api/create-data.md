@@ -1,4 +1,4 @@
-## Create Data Article
+# Create Data Article
 
 Membuat atau menambah data Article, pertama buat route pada folder routes/api.php. Logika nya untuk user bisa create data dia perlu login ke akun nya dulu, jadi pada route perlu di tambahkan autentikasi `->middleware(['auth:sanctum'])`
 
@@ -16,27 +16,10 @@ public function store() {
 Lalu cek pada postman dengan mengakses route yang sudah dibuat, jika sudah terhubung antara routes dan function, berikutnya buat validasi pada inputan user agar mengisi data yang benar
 
 ```
-public function store(Request $request) {
-    $validated = $request->validate([
-        'title' => 'required|max:255',
-        'article' => 'required',
-    ]);
-}
-```
-
-setelah membuat validasi kita perlu mengirimkan datanya ke database
-
-```
-public function store(Request $request) {
-    $validated = $request->validate([
-        'title' => 'required|max:255',
-        'article' => 'required',
-    ]);
-
-    $article = Post::create($request->all());
-
-    return new PostDetailResource($article->loadMissing('author:id,username'));
-}
+$validated = $request->validate([
+    'title' => 'required|max:255',
+    'article' => 'required',
+]);
 ```
 
 Lalu karena pada tabel article ada field `author_id` kita ingin mengisi nya dengan id pada tabel user. Kode ini digunakan untuk mengatur nilai 'author_id' pada objek $request sebelum data disimpan.
@@ -45,7 +28,31 @@ Lalu karena pada tabel article ada field `author_id` kita ingin mengisi nya deng
 $request['author_id'] = Auth::user()->id;
 ```
 
-Penjelasan:
+Setelah membuat validasi kita perlu mengirimkan datanya ke database
+
+```
+$article = Post::create($request->all());
+
+return new PostDetailResource($article->loadMissing('author:id,username'));
+```
+
+Seluruh code pada function store data
+
+```
+public function store(Request $request) {
+    $validated = $request->validate([
+        'title' => 'required|max:255',
+        'article' => 'required',
+    ]);
+
+    $request['author_id'] = Auth::user()->id;
+    $article = Post::create($request->all());
+
+    return new PostDetailResource($article->loadMissing('author:id,username'));
+}
+```
+
+Detail:
 
 - $request: objek ini berisi data yang dikirimkan oleh klien ke server, seperti data formulir, data query string, header, dan lainnya.
 
