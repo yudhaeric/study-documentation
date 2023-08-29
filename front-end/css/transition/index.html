@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Transition</title>
+    <style>
+        * {
+            background-color: #131313;
+            margin: 0;
+        }
+
+        @keyframes loading {
+            0% {
+                height: 100vh;
+                background-color: lightblue;
+            }
+
+            /* 90% {
+                height: 100vh;
+            } */
+
+            100% {
+                position: absolute;
+                transform: translateY(100vh);
+            }
+        }
+
+        .loading {
+            height: 100vh;
+            background-color: lightblue;
+            z-index: -10;
+
+            animation-name: loading;
+            animation-duration: 3s;
+            /* animation-timing-function: ; */
+            animation-delay: 3s;
+            /* animation-iteration-count: ;
+            animation-direction: ;
+            animation-fill-mode: ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+
+    </div>
+</body>
+</html>
