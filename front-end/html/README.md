@@ -4,3 +4,4 @@
 - Semantic HTML
 - Form Validation
 - Basic SEO
+- Canvas
