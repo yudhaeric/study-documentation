@@ -19,8 +19,6 @@
         .wrapper-canvas canvas {
             background-color: #363636;
         }
-
-        #duplicate
     </style>
 </head>
 <body>
@@ -73,12 +71,30 @@
         c.fill();
         c.stroke();
 
-        // Duplicates Shapes
-        const shapes = document.getElementById("duplicate-shapes")
+        // Random Circle
+        const canvas2 = document.getElementById("duplicate-shapes")
 
-        shapes.width = 500;
-        shapes.height = 200;
+        canvas2.width = 500;
+        canvas2.height = 200;
 
+        const shapes = canvas2.getContext("2d");
+
+        function drawRandomCircle() {
+            for (let i = 0; i <= 10; i++) {
+                let x = Math.random() * 500;
+                let y = Math.random() * 200;
+                shapes.fillStyle = 'white';
+                shapes.strokeStyle = 'black';
+    
+                shapes.beginPath();
+    
+                shapes.arc(x, y, 20, 0, 2 * Math.PI, false);
+                shapes.fill();
+                shapes.stroke();
+            }
+        }
+
+        drawRandomCircle();
     </script>
 </body>
 </html>
