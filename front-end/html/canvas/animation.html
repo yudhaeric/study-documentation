@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const c = canvas.getContext("2d");
+
+        let x = 120;
+        let y = 140;
+        let speedX = 5;
+        let speedY = 5;
+        let radius = 100;
+
+        function draw() {
+            // untuk mencetak shape rectangle berulang kali tanpa henti
+            window.requestAnimationFrame(draw);
+            
+            // untuk menghapus shape rectangle yang lama 
+            // jadi yang terlihat selalu rectangle yang terbaru 
+            c.clearRect(0, 0, innerWidth, innerHeight);
+            
+            c.fillStyle='lightblue';
+            c.strokeStyle='black';
+            
+            c.beginPath();
+
+            c.arc(x, y, radius, 0, 2 * Math.PI);
+            c.fill();
+            c.stroke();
+
+            // membuat kondisi agar rectangle berjalan mantul ke kanan ke kiri
+            if (x + radius > innerWidth || x - radius < 0) {
+                speedX = -speedX
+            }
+            
+            // membuat kondisi agar rectangle berjalan mantul ke atas ke bawah
+            if (y + radius > innerHeight || y - radius < 0) {
+                speedY = -speedY
+            }
+
+            x += speedX;
+            y += speedY;
+        }
+
+        // memanggil function untuk mencetak shape rectangle
+        draw();
+    </script>
+</body>
+</html>

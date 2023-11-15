@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn HTML Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper-canvas {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .wrapper-canvas canvas {
+            background-color: #363636;
+        }
+
+        #duplicate
+    </style>
+</head>
+<body>
+    <div class="wrapper-canvas">
+        <canvas id="canvas"></canvas>
+    </div>
+    
+    <canvas id="duplicate-shapes"></canvas>
+
+    <script>
+        // Menyiapkan Canvas
+        const canvas = document.getElementById("canvas");
+
+        // Atur Ukuran Canvas
+        canvas.width = 500;
+        canvas.height = 200;
+
+        // Tentukan Context
+        const c = canvas.getContext("2d");
+
+        // Atur Style
+        c.fillStyle = 'pink';
+        c.strokeStyle = 'white';
+        c.lineWidth = '5';
+
+        // Membuat Rectangle
+        // rect(x, y, width, height)
+        c.rect(50, 50, 100, 100);
+        c.fill();
+        c.stroke();
+
+        // Membuat Circle / Arc / Lingkaran
+        c.fillStyle = "lightgreen"
+        c.beginPath();
+        // arc(x, y, radius, sudut awal, sudut akhir)
+        c.arc(240, 100, 50, 0, 2 * Math.PI);
+        c.fill();
+        c.stroke();
+
+        // Membuat Triangle
+        c.fillStyle = "lightblue"
+        c.beginPath();
+        // moveTo(titik awal)
+        c.moveTo(380, 50);
+        // lineTo(titik akhir)
+        c.lineTo(450, 150);
+        c.lineTo(320, 150);
+        // closePath(otomatis menutup titik akhir ke titik awal)
+        c.closePath();
+        c.fill();
+        c.stroke();
+
+        // Duplicates Shapes
+        const shapes = document.getElementById("duplicate-shapes")
+
+        shapes.width = 500;
+        shapes.height = 200;
+
+    </script>
+</body>
+</html>
